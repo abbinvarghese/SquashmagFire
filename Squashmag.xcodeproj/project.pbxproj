@@ -1,0 +1,324 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ED2C6BBF1CFD64B20019C4D3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2C6BBE1CFD64B20019C4D3 /* main.m */; };
+		ED2C6BC21CFD64B20019C4D3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2C6BC11CFD64B20019C4D3 /* AppDelegate.m */; };
+		ED2C6BC51CFD64B20019C4D3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2C6BC41CFD64B20019C4D3 /* ViewController.m */; };
+		ED2C6BC81CFD64B20019C4D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED2C6BC61CFD64B20019C4D3 /* Main.storyboard */; };
+		ED2C6BCB1CFD64B20019C4D3 /* Squashmag.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ED2C6BC91CFD64B20019C4D3 /* Squashmag.xcdatamodeld */; };
+		ED2C6BCD1CFD64B20019C4D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED2C6BCC1CFD64B20019C4D3 /* Assets.xcassets */; };
+		ED2C6BD01CFD64B20019C4D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED2C6BCE1CFD64B20019C4D3 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		ED2C6BBA1CFD64B20019C4D3 /* Squashmag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Squashmag.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED2C6BBE1CFD64B20019C4D3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		ED2C6BC01CFD64B20019C4D3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		ED2C6BC11CFD64B20019C4D3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		ED2C6BC31CFD64B20019C4D3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		ED2C6BC41CFD64B20019C4D3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		ED2C6BC71CFD64B20019C4D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ED2C6BCA1CFD64B20019C4D3 /* Squashmag.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Squashmag.xcdatamodel; sourceTree = "<group>"; };
+		ED2C6BCC1CFD64B20019C4D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ED2C6BCF1CFD64B20019C4D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		ED2C6BD11CFD64B20019C4D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ED2C6BB71CFD64B20019C4D3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ED2C6BB11CFD64B20019C4D3 = {
+			isa = PBXGroup;
+			children = (
+				ED2C6BBC1CFD64B20019C4D3 /* Squashmag */,
+				ED2C6BBB1CFD64B20019C4D3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ED2C6BBB1CFD64B20019C4D3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ED2C6BBA1CFD64B20019C4D3 /* Squashmag.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ED2C6BBC1CFD64B20019C4D3 /* Squashmag */ = {
+			isa = PBXGroup;
+			children = (
+				ED2C6BC01CFD64B20019C4D3 /* AppDelegate.h */,
+				ED2C6BC11CFD64B20019C4D3 /* AppDelegate.m */,
+				ED2C6BC31CFD64B20019C4D3 /* ViewController.h */,
+				ED2C6BC41CFD64B20019C4D3 /* ViewController.m */,
+				ED2C6BC61CFD64B20019C4D3 /* Main.storyboard */,
+				ED2C6BCC1CFD64B20019C4D3 /* Assets.xcassets */,
+				ED2C6BCE1CFD64B20019C4D3 /* LaunchScreen.storyboard */,
+				ED2C6BD11CFD64B20019C4D3 /* Info.plist */,
+				ED2C6BC91CFD64B20019C4D3 /* Squashmag.xcdatamodeld */,
+				ED2C6BBD1CFD64B20019C4D3 /* Supporting Files */,
+			);
+			path = Squashmag;
+			sourceTree = "<group>";
+		};
+		ED2C6BBD1CFD64B20019C4D3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ED2C6BBE1CFD64B20019C4D3 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ED2C6BB91CFD64B20019C4D3 /* Squashmag */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED2C6BD41CFD64B20019C4D3 /* Build configuration list for PBXNativeTarget "Squashmag" */;
+			buildPhases = (
+				ED2C6BB61CFD64B20019C4D3 /* Sources */,
+				ED2C6BB71CFD64B20019C4D3 /* Frameworks */,
+				ED2C6BB81CFD64B20019C4D3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Squashmag;
+			productName = Squashmag;
+			productReference = ED2C6BBA1CFD64B20019C4D3 /* Squashmag.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ED2C6BB21CFD64B20019C4D3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Abbin Varghese";
+				TargetAttributes = {
+					ED2C6BB91CFD64B20019C4D3 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = ED2C6BB51CFD64B20019C4D3 /* Build configuration list for PBXProject "Squashmag" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ED2C6BB11CFD64B20019C4D3;
+			productRefGroup = ED2C6BBB1CFD64B20019C4D3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ED2C6BB91CFD64B20019C4D3 /* Squashmag */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ED2C6BB81CFD64B20019C4D3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED2C6BD01CFD64B20019C4D3 /* LaunchScreen.storyboard in Resources */,
+				ED2C6BCD1CFD64B20019C4D3 /* Assets.xcassets in Resources */,
+				ED2C6BC81CFD64B20019C4D3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ED2C6BB61CFD64B20019C4D3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED2C6BCB1CFD64B20019C4D3 /* Squashmag.xcdatamodeld in Sources */,
+				ED2C6BC51CFD64B20019C4D3 /* ViewController.m in Sources */,
+				ED2C6BC21CFD64B20019C4D3 /* AppDelegate.m in Sources */,
+				ED2C6BBF1CFD64B20019C4D3 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		ED2C6BC61CFD64B20019C4D3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ED2C6BC71CFD64B20019C4D3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		ED2C6BCE1CFD64B20019C4D3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ED2C6BCF1CFD64B20019C4D3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ED2C6BD21CFD64B20019C4D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		ED2C6BD31CFD64B20019C4D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ED2C6BD51CFD64B20019C4D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Squashmag/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ThePaadamCompany.Squashmag;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		ED2C6BD61CFD64B20019C4D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Squashmag/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ThePaadamCompany.Squashmag;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ED2C6BB51CFD64B20019C4D3 /* Build configuration list for PBXProject "Squashmag" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED2C6BD21CFD64B20019C4D3 /* Debug */,
+				ED2C6BD31CFD64B20019C4D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED2C6BD41CFD64B20019C4D3 /* Build configuration list for PBXNativeTarget "Squashmag" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED2C6BD51CFD64B20019C4D3 /* Debug */,
+				ED2C6BD61CFD64B20019C4D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		ED2C6BC91CFD64B20019C4D3 /* Squashmag.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				ED2C6BCA1CFD64B20019C4D3 /* Squashmag.xcdatamodel */,
+			);
+			currentVersion = ED2C6BCA1CFD64B20019C4D3 /* Squashmag.xcdatamodel */;
+			path = Squashmag.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = ED2C6BB21CFD64B20019C4D3 /* Project object */;
+}
