@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "SQFirebaseHelper.h"
+@import Firebase;
 
 @interface AppDelegate ()
 
@@ -16,7 +18,29 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    [FIRApp configure];
+    [[SQFirebaseHelper sharedHelper] startListeningToBDChanges];
+    
+    [[FIRAuth auth] addAuthStateDidChangeListener:^(FIRAuth *_Nonnull auth,
+                                                    FIRUser *_Nullable user) {
+        if (user != nil) {
+            NSLog(@"// User is signed in.");
+        } else {
+            NSLog(@"// No User is signed in.");
+            [[FIRAuth auth] signInWithEmail:@"mytestmail@gmail.com"
+                                   password:@"asdqwe123"
+                                 completion:^(FIRUser *user, NSError *error) {
+                                     if (!error) {
+                                         NSLog(@"// User is signed in.");
+                                     }
+                                     else{
+                                         NSLog(@"// User signed in failed");
+                                     }
+                                 }];
+        }
+    }];
+    
     return YES;
 }
 

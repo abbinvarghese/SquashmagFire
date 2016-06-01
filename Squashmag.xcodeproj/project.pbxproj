@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7450255A051E2767C8AD1404 /* libPods-Squashmag.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 180E752D08443B0E4C9CD557 /* libPods-Squashmag.a */; };
 		ED2C6BBF1CFD64B20019C4D3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2C6BBE1CFD64B20019C4D3 /* main.m */; };
 		ED2C6BC21CFD64B20019C4D3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2C6BC11CFD64B20019C4D3 /* AppDelegate.m */; };
 		ED2C6BC51CFD64B20019C4D3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2C6BC41CFD64B20019C4D3 /* ViewController.m */; };
@@ -14,9 +15,32 @@
 		ED2C6BCB1CFD64B20019C4D3 /* Squashmag.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ED2C6BC91CFD64B20019C4D3 /* Squashmag.xcdatamodeld */; };
 		ED2C6BCD1CFD64B20019C4D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED2C6BCC1CFD64B20019C4D3 /* Assets.xcassets */; };
 		ED2C6BD01CFD64B20019C4D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED2C6BCE1CFD64B20019C4D3 /* LaunchScreen.storyboard */; };
+		ED2C6BDC1CFD73310019C4D3 /* SQFirebaseHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2C6BDB1CFD73310019C4D3 /* SQFirebaseHelper.m */; };
+		ED2C6BDE1CFD78900019C4D3 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ED2C6BDD1CFD78900019C4D3 /* 1.jpg */; };
+		ED2C6BE01CFD9E940019C4D3 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ED2C6BDF1CFD9E940019C4D3 /* 2.jpg */; };
+		ED2C6BE21CFD9EB60019C4D3 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ED2C6BE11CFD9EB60019C4D3 /* 3.jpg */; };
+		ED2C6BE41CFD9EC80019C4D3 /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ED2C6BE31CFD9EC80019C4D3 /* 4.jpg */; };
+		ED2C6BE61CFD9ED60019C4D3 /* 5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ED2C6BE51CFD9ED60019C4D3 /* 5.jpg */; };
+		ED2C6BE81CFD9EE40019C4D3 /* 6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ED2C6BE71CFD9EE40019C4D3 /* 6.jpg */; };
+		ED2C6BEA1CFD9EF50019C4D3 /* 7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ED2C6BE91CFD9EF50019C4D3 /* 7.jpg */; };
+		ED2C6BEC1CFD9F060019C4D3 /* 8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ED2C6BEB1CFD9F060019C4D3 /* 8.jpg */; };
+		ED2C6BEE1CFD9F140019C4D3 /* 9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ED2C6BED1CFD9F140019C4D3 /* 9.jpg */; };
+		ED2C6BF01CFD9F390019C4D3 /* 11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ED2C6BEF1CFD9F390019C4D3 /* 11.jpg */; };
+		ED2C6BF21CFD9F4E0019C4D3 /* 10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ED2C6BF11CFD9F4E0019C4D3 /* 10.jpg */; };
+		ED2C6BF61CFD9F820019C4D3 /* 13.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ED2C6BF51CFD9F820019C4D3 /* 13.jpg */; };
+		ED2C6BF81CFD9F950019C4D3 /* 12.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ED2C6BF71CFD9F950019C4D3 /* 12.jpg */; };
+		ED335BA11CFEE54D00859D03 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ED335BA01CFEE54D00859D03 /* GoogleService-Info.plist */; };
+		ED335BA91CFEF05F00859D03 /* YSLCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = ED335BA41CFEF05F00859D03 /* YSLCardView.m */; };
+		ED335BAA1CFEF05F00859D03 /* YSLDraggableCardContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = ED335BA61CFEF05F00859D03 /* YSLDraggableCardContainer.m */; };
+		ED335BAB1CFEF05F00859D03 /* CardView.m in Sources */ = {isa = PBXBuildFile; fileRef = ED335BA81CFEF05F00859D03 /* CardView.m */; };
+		ED335BB31CFF1C9200859D03 /* Article+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = ED335BB01CFF1C9200859D03 /* Article+CoreDataProperties.m */; };
+		ED335BB41CFF1C9200859D03 /* Article.m in Sources */ = {isa = PBXBuildFile; fileRef = ED335BB21CFF1C9200859D03 /* Article.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		180E752D08443B0E4C9CD557 /* libPods-Squashmag.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Squashmag.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EA1291661083596A0591CA2 /* Pods-Squashmag.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Squashmag.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Squashmag/Pods-Squashmag.debug.xcconfig"; sourceTree = "<group>"; };
+		E9D06FAD66DA51EFB5B63871 /* Pods-Squashmag.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Squashmag.release.xcconfig"; path = "Pods/Target Support Files/Pods-Squashmag/Pods-Squashmag.release.xcconfig"; sourceTree = "<group>"; };
 		ED2C6BBA1CFD64B20019C4D3 /* Squashmag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Squashmag.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED2C6BBE1CFD64B20019C4D3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		ED2C6BC01CFD64B20019C4D3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -28,6 +52,32 @@
 		ED2C6BCC1CFD64B20019C4D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED2C6BCF1CFD64B20019C4D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED2C6BD11CFD64B20019C4D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED2C6BDA1CFD73310019C4D3 /* SQFirebaseHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQFirebaseHelper.h; sourceTree = "<group>"; };
+		ED2C6BDB1CFD73310019C4D3 /* SQFirebaseHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQFirebaseHelper.m; sourceTree = "<group>"; };
+		ED2C6BDD1CFD78900019C4D3 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
+		ED2C6BDF1CFD9E940019C4D3 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
+		ED2C6BE11CFD9EB60019C4D3 /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
+		ED2C6BE31CFD9EC80019C4D3 /* 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpg; sourceTree = "<group>"; };
+		ED2C6BE51CFD9ED60019C4D3 /* 5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5.jpg; sourceTree = "<group>"; };
+		ED2C6BE71CFD9EE40019C4D3 /* 6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 6.jpg; sourceTree = "<group>"; };
+		ED2C6BE91CFD9EF50019C4D3 /* 7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 7.jpg; sourceTree = "<group>"; };
+		ED2C6BEB1CFD9F060019C4D3 /* 8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 8.jpg; sourceTree = "<group>"; };
+		ED2C6BED1CFD9F140019C4D3 /* 9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 9.jpg; sourceTree = "<group>"; };
+		ED2C6BEF1CFD9F390019C4D3 /* 11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 11.jpg; sourceTree = "<group>"; };
+		ED2C6BF11CFD9F4E0019C4D3 /* 10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 10.jpg; sourceTree = "<group>"; };
+		ED2C6BF51CFD9F820019C4D3 /* 13.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 13.jpg; sourceTree = "<group>"; };
+		ED2C6BF71CFD9F950019C4D3 /* 12.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 12.jpg; sourceTree = "<group>"; };
+		ED335BA01CFEE54D00859D03 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		ED335BA31CFEF05F00859D03 /* YSLCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSLCardView.h; sourceTree = "<group>"; };
+		ED335BA41CFEF05F00859D03 /* YSLCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSLCardView.m; sourceTree = "<group>"; };
+		ED335BA51CFEF05F00859D03 /* YSLDraggableCardContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSLDraggableCardContainer.h; sourceTree = "<group>"; };
+		ED335BA61CFEF05F00859D03 /* YSLDraggableCardContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSLDraggableCardContainer.m; sourceTree = "<group>"; };
+		ED335BA71CFEF05F00859D03 /* CardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardView.h; sourceTree = "<group>"; };
+		ED335BA81CFEF05F00859D03 /* CardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardView.m; sourceTree = "<group>"; };
+		ED335BAF1CFF1C9200859D03 /* Article+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Article+CoreDataProperties.h"; sourceTree = "<group>"; };
+		ED335BB01CFF1C9200859D03 /* Article+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Article+CoreDataProperties.m"; sourceTree = "<group>"; };
+		ED335BB11CFF1C9200859D03 /* Article.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Article.h; sourceTree = "<group>"; };
+		ED335BB21CFF1C9200859D03 /* Article.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Article.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +85,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7450255A051E2767C8AD1404 /* libPods-Squashmag.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		565E2A7B94283885EE1E9530 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				180E752D08443B0E4C9CD557 /* libPods-Squashmag.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		647451D5E2722482E2AFCAD9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1EA1291661083596A0591CA2 /* Pods-Squashmag.debug.xcconfig */,
+				E9D06FAD66DA51EFB5B63871 /* Pods-Squashmag.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		ED2C6BB11CFD64B20019C4D3 = {
 			isa = PBXGroup;
 			children = (
 				ED2C6BBC1CFD64B20019C4D3 /* Squashmag */,
 				ED2C6BBB1CFD64B20019C4D3 /* Products */,
+				647451D5E2722482E2AFCAD9 /* Pods */,
+				565E2A7B94283885EE1E9530 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +130,9 @@
 		ED2C6BBC1CFD64B20019C4D3 /* Squashmag */ = {
 			isa = PBXGroup;
 			children = (
+				ED335BB51CFF1CC400859D03 /* Core Data Helper */,
+				ED335BA21CFEF05000859D03 /* CardView */,
+				ED2C6BD91CFD72820019C4D3 /* Modal */,
 				ED2C6BC01CFD64B20019C4D3 /* AppDelegate.h */,
 				ED2C6BC11CFD64B20019C4D3 /* AppDelegate.m */,
 				ED2C6BC31CFD64B20019C4D3 /* ViewController.h */,
@@ -68,7 +141,21 @@
 				ED2C6BCC1CFD64B20019C4D3 /* Assets.xcassets */,
 				ED2C6BCE1CFD64B20019C4D3 /* LaunchScreen.storyboard */,
 				ED2C6BD11CFD64B20019C4D3 /* Info.plist */,
+				ED335BA01CFEE54D00859D03 /* GoogleService-Info.plist */,
 				ED2C6BC91CFD64B20019C4D3 /* Squashmag.xcdatamodeld */,
+				ED2C6BDD1CFD78900019C4D3 /* 1.jpg */,
+				ED2C6BDF1CFD9E940019C4D3 /* 2.jpg */,
+				ED2C6BE11CFD9EB60019C4D3 /* 3.jpg */,
+				ED2C6BE31CFD9EC80019C4D3 /* 4.jpg */,
+				ED2C6BE51CFD9ED60019C4D3 /* 5.jpg */,
+				ED2C6BE71CFD9EE40019C4D3 /* 6.jpg */,
+				ED2C6BE91CFD9EF50019C4D3 /* 7.jpg */,
+				ED2C6BEB1CFD9F060019C4D3 /* 8.jpg */,
+				ED2C6BED1CFD9F140019C4D3 /* 9.jpg */,
+				ED2C6BF11CFD9F4E0019C4D3 /* 10.jpg */,
+				ED2C6BEF1CFD9F390019C4D3 /* 11.jpg */,
+				ED2C6BF51CFD9F820019C4D3 /* 13.jpg */,
+				ED2C6BF71CFD9F950019C4D3 /* 12.jpg */,
 				ED2C6BBD1CFD64B20019C4D3 /* Supporting Files */,
 			);
 			path = Squashmag;
@@ -82,6 +169,39 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		ED2C6BD91CFD72820019C4D3 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				ED2C6BDA1CFD73310019C4D3 /* SQFirebaseHelper.h */,
+				ED2C6BDB1CFD73310019C4D3 /* SQFirebaseHelper.m */,
+			);
+			name = Modal;
+			sourceTree = "<group>";
+		};
+		ED335BA21CFEF05000859D03 /* CardView */ = {
+			isa = PBXGroup;
+			children = (
+				ED335BA31CFEF05F00859D03 /* YSLCardView.h */,
+				ED335BA41CFEF05F00859D03 /* YSLCardView.m */,
+				ED335BA51CFEF05F00859D03 /* YSLDraggableCardContainer.h */,
+				ED335BA61CFEF05F00859D03 /* YSLDraggableCardContainer.m */,
+				ED335BA71CFEF05F00859D03 /* CardView.h */,
+				ED335BA81CFEF05F00859D03 /* CardView.m */,
+			);
+			name = CardView;
+			sourceTree = "<group>";
+		};
+		ED335BB51CFF1CC400859D03 /* Core Data Helper */ = {
+			isa = PBXGroup;
+			children = (
+				ED335BAF1CFF1C9200859D03 /* Article+CoreDataProperties.h */,
+				ED335BB01CFF1C9200859D03 /* Article+CoreDataProperties.m */,
+				ED335BB11CFF1C9200859D03 /* Article.h */,
+				ED335BB21CFF1C9200859D03 /* Article.m */,
+			);
+			name = "Core Data Helper";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -89,9 +209,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ED2C6BD41CFD64B20019C4D3 /* Build configuration list for PBXNativeTarget "Squashmag" */;
 			buildPhases = (
+				95822210CA80D898D6FFD027 /* 📦 Check Pods Manifest.lock */,
 				ED2C6BB61CFD64B20019C4D3 /* Sources */,
 				ED2C6BB71CFD64B20019C4D3 /* Frameworks */,
 				ED2C6BB81CFD64B20019C4D3 /* Resources */,
+				C2E6688A295F99E09A741F50 /* 📦 Embed Pods Frameworks */,
+				252B81899A5E4E2526401081 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -108,6 +231,7 @@
 		ED2C6BB21CFD64B20019C4D3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = SQ;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Abbin Varghese";
 				TargetAttributes = {
@@ -139,22 +263,90 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED2C6BF81CFD9F950019C4D3 /* 12.jpg in Resources */,
+				ED2C6BEE1CFD9F140019C4D3 /* 9.jpg in Resources */,
+				ED2C6BEC1CFD9F060019C4D3 /* 8.jpg in Resources */,
+				ED2C6BEA1CFD9EF50019C4D3 /* 7.jpg in Resources */,
+				ED2C6BE41CFD9EC80019C4D3 /* 4.jpg in Resources */,
+				ED2C6BE01CFD9E940019C4D3 /* 2.jpg in Resources */,
+				ED2C6BF61CFD9F820019C4D3 /* 13.jpg in Resources */,
+				ED2C6BF01CFD9F390019C4D3 /* 11.jpg in Resources */,
 				ED2C6BD01CFD64B20019C4D3 /* LaunchScreen.storyboard in Resources */,
+				ED2C6BE61CFD9ED60019C4D3 /* 5.jpg in Resources */,
+				ED2C6BE81CFD9EE40019C4D3 /* 6.jpg in Resources */,
+				ED2C6BF21CFD9F4E0019C4D3 /* 10.jpg in Resources */,
+				ED335BA11CFEE54D00859D03 /* GoogleService-Info.plist in Resources */,
 				ED2C6BCD1CFD64B20019C4D3 /* Assets.xcassets in Resources */,
 				ED2C6BC81CFD64B20019C4D3 /* Main.storyboard in Resources */,
+				ED2C6BE21CFD9EB60019C4D3 /* 3.jpg in Resources */,
+				ED2C6BDE1CFD78900019C4D3 /* 1.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		252B81899A5E4E2526401081 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Squashmag/Pods-Squashmag-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		95822210CA80D898D6FFD027 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C2E6688A295F99E09A741F50 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Squashmag/Pods-Squashmag-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		ED2C6BB61CFD64B20019C4D3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED2C6BDC1CFD73310019C4D3 /* SQFirebaseHelper.m in Sources */,
+				ED335BB41CFF1C9200859D03 /* Article.m in Sources */,
 				ED2C6BCB1CFD64B20019C4D3 /* Squashmag.xcdatamodeld in Sources */,
 				ED2C6BC51CFD64B20019C4D3 /* ViewController.m in Sources */,
 				ED2C6BC21CFD64B20019C4D3 /* AppDelegate.m in Sources */,
+				ED335BAA1CFEF05F00859D03 /* YSLDraggableCardContainer.m in Sources */,
+				ED335BA91CFEF05F00859D03 /* YSLCardView.m in Sources */,
+				ED335BAB1CFEF05F00859D03 /* CardView.m in Sources */,
+				ED335BB31CFF1C9200859D03 /* Article+CoreDataProperties.m in Sources */,
 				ED2C6BBF1CFD64B20019C4D3 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,9 +457,11 @@
 		};
 		ED2C6BD51CFD64B20019C4D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1EA1291661083596A0591CA2 /* Pods-Squashmag.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Squashmag/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ThePaadamCompany.Squashmag;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -276,9 +470,11 @@
 		};
 		ED2C6BD61CFD64B20019C4D3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9D06FAD66DA51EFB5B63871 /* Pods-Squashmag.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Squashmag/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ThePaadamCompany.Squashmag;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -304,6 +500,7 @@
 				ED2C6BD61CFD64B20019C4D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
