@@ -16,7 +16,7 @@
 @dynamic website;
 @dynamic author;
 @dynamic heading;
-@dynamic imageurl;
+@dynamic articleimageUrl;
 @dynamic timestamp;
-@dynamic uID;
+@dynamic articleuid;
 @end

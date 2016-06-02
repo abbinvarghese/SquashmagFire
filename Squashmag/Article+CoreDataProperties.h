@@ -18,9 +18,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, retain) NSString *website;
 @property (nullable, nonatomic, retain) NSString *author;
 @property (nullable, nonatomic, retain) NSString *heading;
-@property (nullable, nonatomic, retain) NSString *imageurl;
+@property (nullable, nonatomic, retain) NSString *articleimageUrl;
 @property (nullable, nonatomic, retain) NSNumber *timestamp;
-@property (nullable, nonatomic, retain) NSString *uID;
+@property (nullable, nonatomic, retain) NSString *articleuid;
 
 @end
 

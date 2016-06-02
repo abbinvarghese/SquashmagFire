@@ -24,7 +24,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //[self dude];
+   // [self dude];
     _container = [[YSLDraggableCardContainer alloc]init];
     _container.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
     _container.backgroundColor = [UIColor clearColor];
@@ -80,14 +80,14 @@
 -(void)dude{
     [SQFirebaseHelper uploadArticleWithHeading:[self randHeading] author:[self randAuth] image:[self randImage] website:[self randWeb] success:^(BOOL success, NSError *error) {
         if (success) {
-                        if (_innt<20) {
+                        if (_innt<2) {
                             _innt++;
                             [self dude];
                         }
             NSLog(@"success %ld",(long)_innt);
         }
         else{
-                        if (_innt<20) {
+                        if (_innt<2) {
                             [self dude];
                         }
             NSLog(@"Failed %ld",(long)_innt);

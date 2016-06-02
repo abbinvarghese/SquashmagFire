@@ -9,13 +9,13 @@
 #import "SQFirebaseHelper.h"
 #import "AppDelegate.h"
 
-NSString *const articleImageUrl = @"Article_ImageUrl";
+NSString *const articleImageUrl = @"articleimageUrl";
 NSString *const articleHeading = @"Article_Heading";
 NSString *const articleAuthor = @"Article_Author";
 NSString *const articleTimeStamp = @"Article_TimeStamp";
 NSString *const articlePath = @"Articles";
 NSString *const articleWebsite = @"Article_Website";
-NSString *const articleUID = @"Article_UID";
+NSString *const articleUID = @"articleuid";
 
 @implementation SQFirebaseHelper
 
@@ -98,7 +98,7 @@ NSString *const articleUID = @"Article_UID";
         
         FIRDatabaseQuery *recentPostsQuery = [[[[FIRDatabase database] reference] child:articlePath] queryLimitedToLast:100];
         [recentPostsQuery observeEventType:FIRDataEventTypeChildAdded withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
-            
+            NSLog(@"%@",snapshot.value);
             dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0ul);
             dispatch_async(queue, ^{
                 if (![snapshot.value isEqual:[NSNull null]]) {
@@ -109,7 +109,7 @@ NSString *const articleUID = @"Article_UID";
                     NSDictionary *dict = snapshot.value;
                     NSError *error = nil;
                     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:articlePath];
-                    [request setPredicate:[NSPredicate predicateWithFormat:@"uID = %@", [dict valueForKey:articleUID]]];
+                    [request setPredicate:[NSPredicate predicateWithFormat:@"articleuid = %@", [dict valueForKey:articleUID]]];
                     NSUInteger count = [tmpContext countForFetchRequest:request error:&error];
                     if (count == 0){
                         Article *newArt = [NSEntityDescription insertNewObjectForEntityForName:articlePath inManagedObjectContext:tmpContext];
@@ -127,9 +127,9 @@ NSString *const articleUID = @"Article_UID";
                             NSLog(@"heading exception");
                         }
                         @try {
-                            newArt.imageurl = [dict valueForKey:articleImageUrl];
+                            newArt.articleimageUrl = [dict valueForKey:articleImageUrl];
                         } @catch (NSException *exception) {
-                            newArt.imageurl = @"";
+                            newArt.articleimageUrl = @"";
                             NSLog(@"imageurl exception");
                         }
                         @try {
@@ -139,9 +139,9 @@ NSString *const articleUID = @"Article_UID";
                             NSLog(@"timestamp exception");
                         }
                         @try {
-                            newArt.uID = [dict valueForKey:articleUID];
+                            newArt.articleuid = [dict valueForKey:articleUID];
                         } @catch (NSException *exception) {
-                            newArt.uID = @"";
+                            newArt.articleuid = @"";
                             NSLog(@"uID exception");
                         }
                         @try {
