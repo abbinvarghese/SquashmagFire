@@ -24,7 +24,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-   // [self dude];
+    
+    [[SQFirebaseHelper sharedHelper]startListeningToBDChanges:^(NSArray *modifiedArray) {
+        if (_articlesArry.count>0){
+            _articlesArry = modifiedArray;
+        }
+        else{
+            _articlesArry = modifiedArray;
+            dispatch_sync(dispatch_get_main_queue(), ^{
+                [_spinnerView endRefreshing];
+                [_container reloadCardContainer];
+            });
+            
+        }
+    }];
+    
     _container = [[YSLDraggableCardContainer alloc]init];
     _container.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
     _container.backgroundColor = [UIColor clearColor];

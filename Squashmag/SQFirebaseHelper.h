@@ -22,10 +22,11 @@ FOUNDATION_EXPORT NSString *const articleUID;
 @interface SQFirebaseHelper : NSObject
 
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+@property (strong, nonatomic) NSManagedObjectContext *tmpContext;
 
 + (SQFirebaseHelper*)sharedHelper;
 
--(void)startListeningToBDChanges;
+-(void)startListeningToBDChanges:(void (^)(NSArray *modifiedArray))success;
 
 +(void)uploadArticleWithHeading:(NSString*)heading
                          author:(NSString*)author

@@ -92,80 +92,69 @@ NSString *const articleUID = @"articleuUID";
     }];
 }
 
--(void)startListeningToBDChanges{
-    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0ul);
-    dispatch_async(queue, ^{
+-(void)startListeningToBDChanges:(void (^)(NSArray *modifiedArray))success{
+    
+    FIRDatabaseQuery *recentPostsQuery = [[[[FIRDatabase database] reference] child:articlePath] queryLimitedToLast:100];
+    [recentPostsQuery keepSynced:YES];
+    
+    [recentPostsQuery observeEventType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
         
-        FIRDatabaseQuery *recentPostsQuery = [[[[FIRDatabase database] reference] child:articlePath] queryLimitedToLast:100];
-        [recentPostsQuery observeEventType:FIRDataEventTypeChildAdded withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
-            NSLog(@"SnapShot");
-            dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0ul);
-            dispatch_async(queue, ^{
-                if (![snapshot.value isEqual:[NSNull null]]) {
-                    NSManagedObjectContext *tmpContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
-                    tmpContext.persistentStoreCoordinator = self.managedObjectContext.persistentStoreCoordinator;
-                    
-                    NSDictionary *dict = snapshot.value;
-                    NSError *error = nil;
-                    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:articlePath];
-                    [request setPredicate:[NSPredicate predicateWithFormat:@"articleuUID = %@", [dict valueForKey:articleUID]]];
-                    NSUInteger count = [tmpContext countForFetchRequest:request error:&error];
-                    if (count == 0){
-                        Article *newArt = [NSEntityDescription insertNewObjectForEntityForName:articlePath inManagedObjectContext:tmpContext];
-                        NSLog(@"Did Write");
-                        @try {
-                            newArt.articleAuthor = [dict valueForKey:articleAuthor];
-                        } @catch (NSException *exception) {
-                            newArt.articleAuthor = @"";
-                            NSLog(@"author exception");
-                        }
-                        @try {
-                            newArt.articleHeading = [dict valueForKey:articleHeading];
-                        } @catch (NSException *exception) {
-                            newArt.articleHeading = @"";
-                            NSLog(@"heading exception");
-                        }
-                        @try {
-                            newArt.articleImageUrl = [dict valueForKey:articleImageUrl];
-                        } @catch (NSException *exception) {
-                            newArt.articleImageUrl = @"";
-                            NSLog(@"imageurl exception");
-                        }
-                        @try {
-                            newArt.articleTimestamp = [NSNumber numberWithDouble:[[dict valueForKey:articleTimeStamp] doubleValue]];
-                        } @catch (NSException *exception) {
-                            newArt.articleTimestamp = 0;
-                            NSLog(@"timestamp exception");
-                        }
-                        @try {
-                            newArt.articleuUID = [dict valueForKey:articleUID];
-                        } @catch (NSException *exception) {
-                            newArt.articleuUID = @"";
-                            NSLog(@"uID exception");
-                        }
-                        @try {
-                            newArt.articleWebsite = [dict valueForKey:articleWebsite];
-                        } @catch (NSException *exception) {
-                            newArt.articleWebsite = @"";
-                            NSLog(@"website exception");
-                        }
-                        // FINAL SAVE
-                        
-                        // Save the object to persistent store
-                        if (![tmpContext save:&error]) {
-                            NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
-                        }
-
-                    }
-                    
+        dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0ul);
+        dispatch_async(queue, ^{
+        
+            _tmpContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
+            _tmpContext.persistentStoreCoordinator = self.managedObjectContext.persistentStoreCoordinator;
+            
+            NSArray *array = [snapshot.value allObjects];
+            NSMutableArray *newArray = [NSMutableArray array];
+            
+            for (NSDictionary *dict in array) {
+                Article *newArt = [NSEntityDescription insertNewObjectForEntityForName:articlePath inManagedObjectContext:_tmpContext];
+                @try {
+                    newArt.articleAuthor = [dict valueForKey:articleAuthor];
+                } @catch (NSException *exception) {
+                    newArt.articleAuthor = @"";
+                    NSLog(@"author exception");
+                }
+                @try {
+                    newArt.articleHeading = [dict valueForKey:articleHeading];
+                } @catch (NSException *exception) {
+                    newArt.articleHeading = @"";
+                    NSLog(@"heading exception");
+                }
+                @try {
+                    newArt.articleImageUrl = [dict valueForKey:articleImageUrl];
+                } @catch (NSException *exception) {
+                    newArt.articleImageUrl = @"";
+                    NSLog(@"imageurl exception");
+                }
+                @try {
+                    newArt.articleTimestamp = [NSNumber numberWithDouble:[[dict valueForKey:articleTimeStamp] doubleValue]];
+                } @catch (NSException *exception) {
+                    newArt.articleTimestamp = 0;
+                    NSLog(@"timestamp exception");
+                }
+                @try {
+                    newArt.articleuUID = [dict valueForKey:articleUID];
+                } @catch (NSException *exception) {
+                    newArt.articleuUID = @"";
+                    NSLog(@"uID exception");
+                }
+                @try {
+                    newArt.articleWebsite = [dict valueForKey:articleWebsite];
+                } @catch (NSException *exception) {
+                    newArt.articleWebsite = @"";
+                    NSLog(@"website exception");
                 }
                 
+                [newArray addObject:newArt];
                 
-            });
+            }
             
-        }];
-        
-    });
+            success(newArray);
+            
+        });
+    }];
 }
 
 - (void)_mocDidSaveNotification:(NSNotification *)notification
@@ -186,23 +175,6 @@ NSString *const articleUID = @"articleuUID";
     
     dispatch_sync(dispatch_get_main_queue(), ^{
         [_managedObjectContext mergeChangesFromContextDidSaveNotification:notification];
-    });
-}
-
--(NSArray*)getArticles{
-    
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-        NSEntityDescription *entity = [NSEntityDescription
-                                       entityForName:articlePath inManagedObjectContext:self.managedObjectContext];
-        [fetchRequest setEntity:entity];
-        NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:articleTimeStamp ascending:NO];
-        [fetchRequest setSortDescriptors:[NSArray arrayWithObject:sortDescriptor]];
-        NSError *error = nil;
-        dispatch_sync(dispatch_get_main_queue(), ^{
-            return [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
-        });
-        
     });
 }
 
