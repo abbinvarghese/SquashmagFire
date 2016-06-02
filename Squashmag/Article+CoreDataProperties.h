@@ -15,12 +15,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Article (CoreDataProperties)
 
-@property (nullable, nonatomic, retain) NSString *website;
-@property (nullable, nonatomic, retain) NSString *author;
-@property (nullable, nonatomic, retain) NSString *heading;
-@property (nullable, nonatomic, retain) NSString *articleimageUrl;
-@property (nullable, nonatomic, retain) NSNumber *timestamp;
-@property (nullable, nonatomic, retain) NSString *articleuid;
+@property (nullable, nonatomic, retain) NSString *articleWebsite;
+@property (nullable, nonatomic, retain) NSString *articleAuthor;
+@property (nullable, nonatomic, retain) NSString *articleHeading;
+@property (nullable, nonatomic, retain) NSString *articleImageUrl;
+@property (nullable, nonatomic, retain) NSNumber *articleTimestamp;
+@property (nullable, nonatomic, retain) NSString *articleuUID;
 
 @end
 

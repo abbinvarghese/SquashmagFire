@@ -9,13 +9,13 @@
 #import "SQFirebaseHelper.h"
 #import "AppDelegate.h"
 
-NSString *const articleImageUrl = @"articleimageUrl";
-NSString *const articleHeading = @"Article_Heading";
-NSString *const articleAuthor = @"Article_Author";
-NSString *const articleTimeStamp = @"Article_TimeStamp";
+NSString *const articleImageUrl = @"articleImageUrl";
+NSString *const articleHeading = @"articleHeading";
+NSString *const articleAuthor = @"articleAuthor";
+NSString *const articleTimeStamp = @"articleTimestamp";
 NSString *const articlePath = @"Articles";
-NSString *const articleWebsite = @"Article_Website";
-NSString *const articleUID = @"articleuid";
+NSString *const articleWebsite = @"articleWebsite";
+NSString *const articleUID = @"articleuUID";
 
 @implementation SQFirebaseHelper
 
@@ -98,56 +98,55 @@ NSString *const articleUID = @"articleuid";
         
         FIRDatabaseQuery *recentPostsQuery = [[[[FIRDatabase database] reference] child:articlePath] queryLimitedToLast:100];
         [recentPostsQuery observeEventType:FIRDataEventTypeChildAdded withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
-            NSLog(@"%@",snapshot.value);
+            NSLog(@"SnapShot");
             dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0ul);
             dispatch_async(queue, ^{
                 if (![snapshot.value isEqual:[NSNull null]]) {
-                    
                     NSManagedObjectContext *tmpContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
                     tmpContext.persistentStoreCoordinator = self.managedObjectContext.persistentStoreCoordinator;
                     
                     NSDictionary *dict = snapshot.value;
                     NSError *error = nil;
                     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:articlePath];
-                    [request setPredicate:[NSPredicate predicateWithFormat:@"articleuid = %@", [dict valueForKey:articleUID]]];
+                    [request setPredicate:[NSPredicate predicateWithFormat:@"articleuUID = %@", [dict valueForKey:articleUID]]];
                     NSUInteger count = [tmpContext countForFetchRequest:request error:&error];
                     if (count == 0){
                         Article *newArt = [NSEntityDescription insertNewObjectForEntityForName:articlePath inManagedObjectContext:tmpContext];
-                        NSLog(@"%@",[NSThread currentThread]);
+                        NSLog(@"Did Write");
                         @try {
-                            newArt.author = [dict valueForKey:articleAuthor];
+                            newArt.articleAuthor = [dict valueForKey:articleAuthor];
                         } @catch (NSException *exception) {
-                            newArt.author = @"";
+                            newArt.articleAuthor = @"";
                             NSLog(@"author exception");
                         }
                         @try {
-                            newArt.heading = [dict valueForKey:articleHeading];
+                            newArt.articleHeading = [dict valueForKey:articleHeading];
                         } @catch (NSException *exception) {
-                            newArt.heading = @"";
+                            newArt.articleHeading = @"";
                             NSLog(@"heading exception");
                         }
                         @try {
-                            newArt.articleimageUrl = [dict valueForKey:articleImageUrl];
+                            newArt.articleImageUrl = [dict valueForKey:articleImageUrl];
                         } @catch (NSException *exception) {
-                            newArt.articleimageUrl = @"";
+                            newArt.articleImageUrl = @"";
                             NSLog(@"imageurl exception");
                         }
                         @try {
-                            newArt.timestamp = [NSNumber numberWithDouble:[[dict valueForKey:articleTimeStamp] doubleValue]];
+                            newArt.articleTimestamp = [NSNumber numberWithDouble:[[dict valueForKey:articleTimeStamp] doubleValue]];
                         } @catch (NSException *exception) {
-                            newArt.timestamp = 0;
+                            newArt.articleTimestamp = 0;
                             NSLog(@"timestamp exception");
                         }
                         @try {
-                            newArt.articleuid = [dict valueForKey:articleUID];
+                            newArt.articleuUID = [dict valueForKey:articleUID];
                         } @catch (NSException *exception) {
-                            newArt.articleuid = @"";
+                            newArt.articleuUID = @"";
                             NSLog(@"uID exception");
                         }
                         @try {
-                            newArt.website = [dict valueForKey:articleWebsite];
+                            newArt.articleWebsite = [dict valueForKey:articleWebsite];
                         } @catch (NSException *exception) {
-                            newArt.website = @"";
+                            newArt.articleWebsite = @"";
                             NSLog(@"website exception");
                         }
                         // FINAL SAVE
@@ -187,6 +186,23 @@ NSString *const articleUID = @"articleuid";
     
     dispatch_sync(dispatch_get_main_queue(), ^{
         [_managedObjectContext mergeChangesFromContextDidSaveNotification:notification];
+    });
+}
+
+-(NSArray*)getArticles{
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+        NSEntityDescription *entity = [NSEntityDescription
+                                       entityForName:articlePath inManagedObjectContext:self.managedObjectContext];
+        [fetchRequest setEntity:entity];
+        NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:articleTimeStamp ascending:NO];
+        [fetchRequest setSortDescriptors:[NSArray arrayWithObject:sortDescriptor]];
+        NSError *error = nil;
+        dispatch_sync(dispatch_get_main_queue(), ^{
+            return [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+        });
+        
     });
 }
 

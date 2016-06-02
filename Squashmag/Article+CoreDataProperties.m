@@ -13,10 +13,10 @@
 
 @implementation Article (CoreDataProperties)
 
-@dynamic website;
-@dynamic author;
-@dynamic heading;
-@dynamic articleimageUrl;
-@dynamic timestamp;
-@dynamic articleuid;
+@dynamic articleWebsite;
+@dynamic articleAuthor;
+@dynamic articleHeading;
+@dynamic articleImageUrl;
+@dynamic articleTimestamp;
+@dynamic articleuUID;
 @end

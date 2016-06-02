@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10171" systemVersion="15E65" minimumToolsVersion="Automatic">
     <entity name="Articles" representedClassName="Article" syncable="YES">
-        <attribute name="articleimageUrl" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="articleuid" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="author" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="heading" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="timestamp" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="website" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="articleAuthor" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="articleHeading" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="articleImageUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="articleTimestamp" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="articleuUID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="articleWebsite" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
         <element name="Articles" positionX="-63" positionY="-18" width="128" height="135"/>
