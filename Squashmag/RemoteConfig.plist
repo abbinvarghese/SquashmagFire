@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>mainScreenHeadingFontSize</key>
+	<integer>15</integer>
+	<key>mainScreenHeadingFontName</key>
+	<string>NotoSerif-Bold</string>
+	<key>mainScreenWebSiteButtonColorHex</key>
+	<string>#FFFFFF</string>
+	<key>mainScreenBackgroundColorHex</key>
+	<string>#FFFFFF</string>
+</dict>
+</plist>

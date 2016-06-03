@@ -8,11 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import "YSLCardView.h"
+#import "Article.h"
+@import Firebase;
+
+FOUNDATION_EXPORT  NSString * const mainScreenHeadingFontName;
+FOUNDATION_EXPORT  NSString * const mainScreenHeadingFontSize;
 
 @interface CardView : YSLCardView
 
 @property (nonatomic, strong) UIImageView *imageView;
-@property (nonatomic, strong) UILabel *label;
-@property (nonatomic, strong) UIView *selectedView;
-
+@property (nonatomic, strong) UILabel *headingLabel;
+@property (nonatomic, strong) Article *articleObj;
+@property (nonatomic, strong) FIRRemoteConfig *remoteConfig;
 @end

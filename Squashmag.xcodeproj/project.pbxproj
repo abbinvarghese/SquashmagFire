@@ -7,7 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7450255A051E2767C8AD1404 /* libPods-Squashmag.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 180E752D08443B0E4C9CD557 /* libPods-Squashmag.a */; };
+		1A88B51DD270F632E5FF43A6 /* libPods-Squashmag.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F9E66A5E0D44EFB9CEAF36C /* libPods-Squashmag.a */; };
+		ED1A51261D019F8500D301B4 /* HexColors.m in Sources */ = {isa = PBXBuildFile; fileRef = ED1A51251D019F8500D301B4 /* HexColors.m */; };
+		ED1A51281D01D68A00D301B4 /* RemoteConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = ED1A51271D01D68A00D301B4 /* RemoteConfig.plist */; };
+		ED1A51441D01F46E00D301B4 /* NotoSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED1A51421D01F46E00D301B4 /* NotoSans-Bold.ttf */; };
+		ED1A51451D01F46E00D301B4 /* NotoSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED1A51431D01F46E00D301B4 /* NotoSans-Regular.ttf */; };
+		ED1A51481D01F47F00D301B4 /* NotoSerif-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED1A51461D01F47F00D301B4 /* NotoSerif-Bold.ttf */; };
+		ED1A51491D01F47F00D301B4 /* NotoSerif-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED1A51471D01F47F00D301B4 /* NotoSerif-Regular.ttf */; };
 		ED2C6BBF1CFD64B20019C4D3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2C6BBE1CFD64B20019C4D3 /* main.m */; };
 		ED2C6BC21CFD64B20019C4D3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2C6BC11CFD64B20019C4D3 /* AppDelegate.m */; };
 		ED2C6BC51CFD64B20019C4D3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2C6BC41CFD64B20019C4D3 /* ViewController.m */; };
@@ -30,17 +36,24 @@
 		ED2C6BF61CFD9F820019C4D3 /* 13.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ED2C6BF51CFD9F820019C4D3 /* 13.jpg */; };
 		ED2C6BF81CFD9F950019C4D3 /* 12.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ED2C6BF71CFD9F950019C4D3 /* 12.jpg */; };
 		ED335BA11CFEE54D00859D03 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ED335BA01CFEE54D00859D03 /* GoogleService-Info.plist */; };
-		ED335BA91CFEF05F00859D03 /* YSLCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = ED335BA41CFEF05F00859D03 /* YSLCardView.m */; };
-		ED335BAA1CFEF05F00859D03 /* YSLDraggableCardContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = ED335BA61CFEF05F00859D03 /* YSLDraggableCardContainer.m */; };
-		ED335BAB1CFEF05F00859D03 /* CardView.m in Sources */ = {isa = PBXBuildFile; fileRef = ED335BA81CFEF05F00859D03 /* CardView.m */; };
 		ED335BB31CFF1C9200859D03 /* Article+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = ED335BB01CFF1C9200859D03 /* Article+CoreDataProperties.m */; };
 		ED335BB41CFF1C9200859D03 /* Article.m in Sources */ = {isa = PBXBuildFile; fileRef = ED335BB21CFF1C9200859D03 /* Article.m */; };
+		EDD10C001D005E0200CE49F4 /* YSLCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD10BFB1D005E0200CE49F4 /* YSLCardView.m */; };
+		EDD10C011D005E0200CE49F4 /* YSLDraggableCardContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD10BFD1D005E0200CE49F4 /* YSLDraggableCardContainer.m */; };
+		EDD10C021D005E0200CE49F4 /* CardView.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD10BFF1D005E0200CE49F4 /* CardView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		180E752D08443B0E4C9CD557 /* libPods-Squashmag.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Squashmag.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EA1291661083596A0591CA2 /* Pods-Squashmag.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Squashmag.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Squashmag/Pods-Squashmag.debug.xcconfig"; sourceTree = "<group>"; };
+		4F9E66A5E0D44EFB9CEAF36C /* libPods-Squashmag.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Squashmag.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9D06FAD66DA51EFB5B63871 /* Pods-Squashmag.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Squashmag.release.xcconfig"; path = "Pods/Target Support Files/Pods-Squashmag/Pods-Squashmag.release.xcconfig"; sourceTree = "<group>"; };
+		ED1A51241D019F8500D301B4 /* HexColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HexColors.h; sourceTree = "<group>"; };
+		ED1A51251D019F8500D301B4 /* HexColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HexColors.m; sourceTree = "<group>"; };
+		ED1A51271D01D68A00D301B4 /* RemoteConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RemoteConfig.plist; sourceTree = "<group>"; };
+		ED1A51421D01F46E00D301B4 /* NotoSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Bold.ttf"; sourceTree = "<group>"; };
+		ED1A51431D01F46E00D301B4 /* NotoSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Regular.ttf"; sourceTree = "<group>"; };
+		ED1A51461D01F47F00D301B4 /* NotoSerif-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerif-Bold.ttf"; sourceTree = "<group>"; };
+		ED1A51471D01F47F00D301B4 /* NotoSerif-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerif-Regular.ttf"; sourceTree = "<group>"; };
 		ED2C6BBA1CFD64B20019C4D3 /* Squashmag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Squashmag.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED2C6BBE1CFD64B20019C4D3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		ED2C6BC01CFD64B20019C4D3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -68,16 +81,16 @@
 		ED2C6BF51CFD9F820019C4D3 /* 13.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 13.jpg; sourceTree = "<group>"; };
 		ED2C6BF71CFD9F950019C4D3 /* 12.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 12.jpg; sourceTree = "<group>"; };
 		ED335BA01CFEE54D00859D03 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		ED335BA31CFEF05F00859D03 /* YSLCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSLCardView.h; sourceTree = "<group>"; };
-		ED335BA41CFEF05F00859D03 /* YSLCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSLCardView.m; sourceTree = "<group>"; };
-		ED335BA51CFEF05F00859D03 /* YSLDraggableCardContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSLDraggableCardContainer.h; sourceTree = "<group>"; };
-		ED335BA61CFEF05F00859D03 /* YSLDraggableCardContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSLDraggableCardContainer.m; sourceTree = "<group>"; };
-		ED335BA71CFEF05F00859D03 /* CardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardView.h; sourceTree = "<group>"; };
-		ED335BA81CFEF05F00859D03 /* CardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardView.m; sourceTree = "<group>"; };
 		ED335BAF1CFF1C9200859D03 /* Article+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Article+CoreDataProperties.h"; sourceTree = "<group>"; };
 		ED335BB01CFF1C9200859D03 /* Article+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Article+CoreDataProperties.m"; sourceTree = "<group>"; };
 		ED335BB11CFF1C9200859D03 /* Article.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Article.h; sourceTree = "<group>"; };
 		ED335BB21CFF1C9200859D03 /* Article.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Article.m; sourceTree = "<group>"; };
+		EDD10BFA1D005E0200CE49F4 /* YSLCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSLCardView.h; sourceTree = "<group>"; };
+		EDD10BFB1D005E0200CE49F4 /* YSLCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSLCardView.m; sourceTree = "<group>"; };
+		EDD10BFC1D005E0200CE49F4 /* YSLDraggableCardContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSLDraggableCardContainer.h; sourceTree = "<group>"; };
+		EDD10BFD1D005E0200CE49F4 /* YSLDraggableCardContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSLDraggableCardContainer.m; sourceTree = "<group>"; };
+		EDD10BFE1D005E0200CE49F4 /* CardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardView.h; sourceTree = "<group>"; };
+		EDD10BFF1D005E0200CE49F4 /* CardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7450255A051E2767C8AD1404 /* libPods-Squashmag.a in Frameworks */,
+				1A88B51DD270F632E5FF43A6 /* libPods-Squashmag.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,7 +108,7 @@
 		565E2A7B94283885EE1E9530 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				180E752D08443B0E4C9CD557 /* libPods-Squashmag.a */,
+				4F9E66A5E0D44EFB9CEAF36C /* libPods-Squashmag.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -107,6 +120,26 @@
 				E9D06FAD66DA51EFB5B63871 /* Pods-Squashmag.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		ED1A51231D019F6F00D301B4 /* HexColors */ = {
+			isa = PBXGroup;
+			children = (
+				ED1A51241D019F8500D301B4 /* HexColors.h */,
+				ED1A51251D019F8500D301B4 /* HexColors.m */,
+			);
+			name = HexColors;
+			sourceTree = "<group>";
+		};
+		ED1A51291D01F45000D301B4 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				ED1A51421D01F46E00D301B4 /* NotoSans-Bold.ttf */,
+				ED1A51431D01F46E00D301B4 /* NotoSans-Regular.ttf */,
+				ED1A51461D01F47F00D301B4 /* NotoSerif-Bold.ttf */,
+				ED1A51471D01F47F00D301B4 /* NotoSerif-Regular.ttf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 		ED2C6BB11CFD64B20019C4D3 = {
@@ -130,6 +163,8 @@
 		ED2C6BBC1CFD64B20019C4D3 /* Squashmag */ = {
 			isa = PBXGroup;
 			children = (
+				ED1A51291D01F45000D301B4 /* Fonts */,
+				ED1A51231D019F6F00D301B4 /* HexColors */,
 				ED335BB51CFF1CC400859D03 /* Core Data Helper */,
 				ED335BA21CFEF05000859D03 /* CardView */,
 				ED2C6BD91CFD72820019C4D3 /* Modal */,
@@ -142,6 +177,7 @@
 				ED2C6BCE1CFD64B20019C4D3 /* LaunchScreen.storyboard */,
 				ED2C6BD11CFD64B20019C4D3 /* Info.plist */,
 				ED335BA01CFEE54D00859D03 /* GoogleService-Info.plist */,
+				ED1A51271D01D68A00D301B4 /* RemoteConfig.plist */,
 				ED2C6BC91CFD64B20019C4D3 /* Squashmag.xcdatamodeld */,
 				ED2C6BDD1CFD78900019C4D3 /* 1.jpg */,
 				ED2C6BDF1CFD9E940019C4D3 /* 2.jpg */,
@@ -181,12 +217,12 @@
 		ED335BA21CFEF05000859D03 /* CardView */ = {
 			isa = PBXGroup;
 			children = (
-				ED335BA31CFEF05F00859D03 /* YSLCardView.h */,
-				ED335BA41CFEF05F00859D03 /* YSLCardView.m */,
-				ED335BA51CFEF05F00859D03 /* YSLDraggableCardContainer.h */,
-				ED335BA61CFEF05F00859D03 /* YSLDraggableCardContainer.m */,
-				ED335BA71CFEF05F00859D03 /* CardView.h */,
-				ED335BA81CFEF05F00859D03 /* CardView.m */,
+				EDD10BFA1D005E0200CE49F4 /* YSLCardView.h */,
+				EDD10BFB1D005E0200CE49F4 /* YSLCardView.m */,
+				EDD10BFC1D005E0200CE49F4 /* YSLDraggableCardContainer.h */,
+				EDD10BFD1D005E0200CE49F4 /* YSLDraggableCardContainer.m */,
+				EDD10BFE1D005E0200CE49F4 /* CardView.h */,
+				EDD10BFF1D005E0200CE49F4 /* CardView.m */,
 			);
 			name = CardView;
 			sourceTree = "<group>";
@@ -263,18 +299,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED1A51491D01F47F00D301B4 /* NotoSerif-Regular.ttf in Resources */,
+				ED1A51441D01F46E00D301B4 /* NotoSans-Bold.ttf in Resources */,
 				ED2C6BF81CFD9F950019C4D3 /* 12.jpg in Resources */,
+				ED1A51451D01F46E00D301B4 /* NotoSans-Regular.ttf in Resources */,
 				ED2C6BEE1CFD9F140019C4D3 /* 9.jpg in Resources */,
 				ED2C6BEC1CFD9F060019C4D3 /* 8.jpg in Resources */,
 				ED2C6BEA1CFD9EF50019C4D3 /* 7.jpg in Resources */,
 				ED2C6BE41CFD9EC80019C4D3 /* 4.jpg in Resources */,
 				ED2C6BE01CFD9E940019C4D3 /* 2.jpg in Resources */,
 				ED2C6BF61CFD9F820019C4D3 /* 13.jpg in Resources */,
+				ED1A51481D01F47F00D301B4 /* NotoSerif-Bold.ttf in Resources */,
 				ED2C6BF01CFD9F390019C4D3 /* 11.jpg in Resources */,
 				ED2C6BD01CFD64B20019C4D3 /* LaunchScreen.storyboard in Resources */,
 				ED2C6BE61CFD9ED60019C4D3 /* 5.jpg in Resources */,
 				ED2C6BE81CFD9EE40019C4D3 /* 6.jpg in Resources */,
 				ED2C6BF21CFD9F4E0019C4D3 /* 10.jpg in Resources */,
+				ED1A51281D01D68A00D301B4 /* RemoteConfig.plist in Resources */,
 				ED335BA11CFEE54D00859D03 /* GoogleService-Info.plist in Resources */,
 				ED2C6BCD1CFD64B20019C4D3 /* Assets.xcassets in Resources */,
 				ED2C6BC81CFD64B20019C4D3 /* Main.storyboard in Resources */,
@@ -340,12 +381,13 @@
 			files = (
 				ED2C6BDC1CFD73310019C4D3 /* SQFirebaseHelper.m in Sources */,
 				ED335BB41CFF1C9200859D03 /* Article.m in Sources */,
+				EDD10C021D005E0200CE49F4 /* CardView.m in Sources */,
+				ED1A51261D019F8500D301B4 /* HexColors.m in Sources */,
 				ED2C6BCB1CFD64B20019C4D3 /* Squashmag.xcdatamodeld in Sources */,
 				ED2C6BC51CFD64B20019C4D3 /* ViewController.m in Sources */,
 				ED2C6BC21CFD64B20019C4D3 /* AppDelegate.m in Sources */,
-				ED335BAA1CFEF05F00859D03 /* YSLDraggableCardContainer.m in Sources */,
-				ED335BA91CFEF05F00859D03 /* YSLCardView.m in Sources */,
-				ED335BAB1CFEF05F00859D03 /* CardView.m in Sources */,
+				EDD10C001D005E0200CE49F4 /* YSLCardView.m in Sources */,
+				EDD10C011D005E0200CE49F4 /* YSLDraggableCardContainer.m in Sources */,
 				ED335BB31CFF1C9200859D03 /* Article+CoreDataProperties.m in Sources */,
 				ED2C6BBF1CFD64B20019C4D3 /* main.m in Sources */,
 			);

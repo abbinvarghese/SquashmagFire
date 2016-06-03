@@ -35,17 +35,7 @@
 }
 
 - (void)setupCardView {
-    // Shadow
-//    self.layer.shadowColor = [UIColor blackColor].CGColor;
-//    self.layer.shadowOpacity = 0.33;
-//    self.layer.shadowOffset = CGSizeMake(0, 0);
-//    self.layer.shadowRadius = 0.5;
-    
-    self.layer.borderColor = [[UIColor lightGrayColor] CGColor];
-    self.layer.borderWidth = 0.4f;
-    self.layer.shouldRasterize = YES;
-    self.layer.rasterizationScale = [[UIScreen mainScreen] scale];
-    self.layer.cornerRadius = 7.0;
+    self.backgroundColor = [UIColor clearColor];
 }
 
 @end

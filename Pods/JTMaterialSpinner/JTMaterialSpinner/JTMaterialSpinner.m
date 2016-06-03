@@ -40,9 +40,9 @@
     
     _circleLayer.fillColor = nil;
     _circleLayer.lineCap = kCALineCapRound;
-    _circleLayer.lineWidth = 2.0;
+    _circleLayer.lineWidth = 3.0;
     
-    _circleLayer.strokeColor = [UIColor orangeColor].CGColor;
+    _circleLayer.strokeColor = [UIColor whiteColor].CGColor;
     _circleLayer.strokeStart = 0;
     _circleLayer.strokeEnd = 0;
 

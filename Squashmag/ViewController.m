@@ -11,12 +11,15 @@
 #import "YSLDraggableCardContainer.h"
 #import "CardView.h"
 #import <JTMaterialSpinner/JTMaterialSpinner.h>
+#import "HexColors.h"
 
 @interface ViewController ()<YSLDraggableCardContainerDelegate, YSLDraggableCardContainerDataSource>
 
 @property (nonatomic, strong) NSArray *articlesArry;
 @property (nonatomic, strong) YSLDraggableCardContainer *container;
 @property (weak, nonatomic) IBOutlet JTMaterialSpinner *spinnerView;
+@property (nonatomic, strong) FIRRemoteConfig *remoteConfig;
+
 @property (nonatomic, assign) NSInteger innt;
 @end
 
@@ -24,6 +27,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.remoteConfig = [FIRRemoteConfig remoteConfig];
+    
+    [self.remoteConfig setDefaultsFromPlistFileName:@"RemoteConfig"];
+    
+    self.view.backgroundColor = [UIColor hx_colorWithHexRGBAString:self.remoteConfig[mainScreenBackgroundColorHex].stringValue];
+
+    [self.remoteConfig fetchWithCompletionHandler:^(FIRRemoteConfigFetchStatus status, NSError *error) {
+        if (status == FIRRemoteConfigFetchStatusSuccess) {
+            [self.remoteConfig activateFetched];
+        }
+    }];
+
+    self.view.layer.cornerRadius = 7;
+    self.view.layer.masksToBounds = YES;
+    
     
     [[SQFirebaseHelper sharedHelper]startListeningToBDChanges:^(NSArray *modifiedArray) {
         if (_articlesArry.count>0){
@@ -44,7 +63,7 @@
     _container.backgroundColor = [UIColor clearColor];
     _container.dataSource = self;
     _container.delegate = self;
-    _container.canDraggableDirection = YSLDraggableDirectionLeft | YSLDraggableDirectionRight | YSLDraggableDirectionUp;
+    _container.canDraggableDirection = YSLDraggableDirectionLeft | YSLDraggableDirectionRight | YSLDraggableDirectionUp | YSLDraggableDirectionDown;
     [self.view insertSubview:_container belowSubview:_spinnerView];
 }
 
@@ -53,10 +72,8 @@
 }
 
 - (UIView *)cardContainerViewNextViewWithIndex:(NSInteger)index{
-    CardView *view = [[CardView alloc]initWithFrame:CGRectMake(10, 64, self.view.frame.size.width - 20, self.view.frame.size.width - 20)];
-    view.backgroundColor = [UIColor whiteColor];
-    view.imageView.image = [UIImage imageNamed:@"1.jpg"];
-    view.label.text = @"Dummy Text";
+    CardView *view = [[CardView alloc]initWithFrame:CGRectMake(10, 77, self.view.frame.size.width-20, self.view.frame.size.height-77*2)];
+    view.articleObj = [_articlesArry objectAtIndex:index];
     return view;
 }
 
@@ -76,6 +93,10 @@
     }
     
     if (draggableDirection == YSLDraggableDirectionUp) {
+        [cardContainerView movePositionWithDirection:draggableDirection
+                                         isAutomatic:NO];
+    }
+    if (draggableDirection == YSLDraggableDirectionDown) {
         [cardContainerView movePositionWithDirection:draggableDirection
                                          isAutomatic:NO];
     }
