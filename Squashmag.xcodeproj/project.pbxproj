@@ -38,6 +38,7 @@
 		ED335BA11CFEE54D00859D03 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ED335BA01CFEE54D00859D03 /* GoogleService-Info.plist */; };
 		ED335BB31CFF1C9200859D03 /* Article+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = ED335BB01CFF1C9200859D03 /* Article+CoreDataProperties.m */; };
 		ED335BB41CFF1C9200859D03 /* Article.m in Sources */ = {isa = PBXBuildFile; fileRef = ED335BB21CFF1C9200859D03 /* Article.m */; };
+		EDC245C81D02F5D400EB5FFD /* dummy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EDC245C71D02F5D400EB5FFD /* dummy.jpg */; };
 		EDD10C001D005E0200CE49F4 /* YSLCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD10BFB1D005E0200CE49F4 /* YSLCardView.m */; };
 		EDD10C011D005E0200CE49F4 /* YSLDraggableCardContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD10BFD1D005E0200CE49F4 /* YSLDraggableCardContainer.m */; };
 		EDD10C021D005E0200CE49F4 /* CardView.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD10BFF1D005E0200CE49F4 /* CardView.m */; };
@@ -85,6 +86,7 @@
 		ED335BB01CFF1C9200859D03 /* Article+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Article+CoreDataProperties.m"; sourceTree = "<group>"; };
 		ED335BB11CFF1C9200859D03 /* Article.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Article.h; sourceTree = "<group>"; };
 		ED335BB21CFF1C9200859D03 /* Article.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Article.m; sourceTree = "<group>"; };
+		EDC245C71D02F5D400EB5FFD /* dummy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dummy.jpg; sourceTree = "<group>"; };
 		EDD10BFA1D005E0200CE49F4 /* YSLCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSLCardView.h; sourceTree = "<group>"; };
 		EDD10BFB1D005E0200CE49F4 /* YSLCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSLCardView.m; sourceTree = "<group>"; };
 		EDD10BFC1D005E0200CE49F4 /* YSLDraggableCardContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSLDraggableCardContainer.h; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 				ED335BA01CFEE54D00859D03 /* GoogleService-Info.plist */,
 				ED1A51271D01D68A00D301B4 /* RemoteConfig.plist */,
 				ED2C6BC91CFD64B20019C4D3 /* Squashmag.xcdatamodeld */,
+				EDC245C71D02F5D400EB5FFD /* dummy.jpg */,
 				ED2C6BDD1CFD78900019C4D3 /* 1.jpg */,
 				ED2C6BDF1CFD9E940019C4D3 /* 2.jpg */,
 				ED2C6BE11CFD9EB60019C4D3 /* 3.jpg */,
@@ -306,6 +309,7 @@
 				ED2C6BEE1CFD9F140019C4D3 /* 9.jpg in Resources */,
 				ED2C6BEC1CFD9F060019C4D3 /* 8.jpg in Resources */,
 				ED2C6BEA1CFD9EF50019C4D3 /* 7.jpg in Resources */,
+				EDC245C81D02F5D400EB5FFD /* dummy.jpg in Resources */,
 				ED2C6BE41CFD9EC80019C4D3 /* 4.jpg in Resources */,
 				ED2C6BE01CFD9E940019C4D3 /* 2.jpg in Resources */,
 				ED2C6BF61CFD9F820019C4D3 /* 13.jpg in Resources */,
@@ -507,6 +511,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ThePaadamCompany.Squashmag;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -520,6 +525,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ThePaadamCompany.Squashmag;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

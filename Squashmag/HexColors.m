@@ -16,6 +16,7 @@
 
 NSString *const mainScreenBackgroundColorHex = @"mainScreenBackgroundColorHex";
 NSString *const mainScreenWebSiteButtonColorHex = @"mainScreenWebSiteButtonColorHex";
+NSString *const mainScreenCardBAckgroundColor = @"mainScreenCardBAckgroundColor";
 
 @implementation HXColor (HexColorAddition)
 

@@ -24,7 +24,7 @@
 
 FOUNDATION_EXPORT  NSString * _Nullable const mainScreenBackgroundColorHex;
 FOUNDATION_EXPORT  NSString * _Nullable const mainScreenWebSiteButtonColorHex;
-
+FOUNDATION_EXPORT  NSString * _Nullable const mainScreenCardBAckgroundColor;
 @interface HXColor (HexColorAddition)
 
 /** 
