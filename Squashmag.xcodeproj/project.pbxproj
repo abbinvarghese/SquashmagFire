@@ -42,6 +42,9 @@
 		EDD10C001D005E0200CE49F4 /* YSLCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD10BFB1D005E0200CE49F4 /* YSLCardView.m */; };
 		EDD10C011D005E0200CE49F4 /* YSLDraggableCardContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD10BFD1D005E0200CE49F4 /* YSLDraggableCardContainer.m */; };
 		EDD10C021D005E0200CE49F4 /* CardView.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD10BFF1D005E0200CE49F4 /* CardView.m */; };
+		EDF492131D0431C300F457DE /* SQSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDF492121D0431C300F457DE /* SQSettingsViewController.m */; };
+		EDF492171D05673A00F457DE /* SQExternalLinkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDF492161D05673A00F457DE /* SQExternalLinkViewController.m */; };
+		EDF4921E1D05C9DC00F457DE /* SQAddNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDF4921D1D05C9DC00F457DE /* SQAddNewViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -93,6 +96,12 @@
 		EDD10BFD1D005E0200CE49F4 /* YSLDraggableCardContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSLDraggableCardContainer.m; sourceTree = "<group>"; };
 		EDD10BFE1D005E0200CE49F4 /* CardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardView.h; sourceTree = "<group>"; };
 		EDD10BFF1D005E0200CE49F4 /* CardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardView.m; sourceTree = "<group>"; };
+		EDF492111D0431C300F457DE /* SQSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQSettingsViewController.h; sourceTree = "<group>"; };
+		EDF492121D0431C300F457DE /* SQSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQSettingsViewController.m; sourceTree = "<group>"; };
+		EDF492151D05673A00F457DE /* SQExternalLinkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQExternalLinkViewController.h; sourceTree = "<group>"; };
+		EDF492161D05673A00F457DE /* SQExternalLinkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQExternalLinkViewController.m; sourceTree = "<group>"; };
+		EDF4921C1D05C9DC00F457DE /* SQAddNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQAddNewViewController.h; sourceTree = "<group>"; };
+		EDF4921D1D05C9DC00F457DE /* SQAddNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQAddNewViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +174,10 @@
 		ED2C6BBC1CFD64B20019C4D3 /* Squashmag */ = {
 			isa = PBXGroup;
 			children = (
+				EDF4921B1D05C9CD00F457DE /* AddNew */,
+				EDF492141D0564BA00F457DE /* ExternalWebView */,
+				EDF4920F1D042A8800F457DE /* Channels */,
+				EDF491FE1D0428DC00F457DE /* Settings */,
 				ED1A51291D01F45000D301B4 /* Fonts */,
 				ED1A51231D019F6F00D301B4 /* HexColors */,
 				ED335BB51CFF1CC400859D03 /* Core Data Helper */,
@@ -239,6 +252,40 @@
 				ED335BB21CFF1C9200859D03 /* Article.m */,
 			);
 			name = "Core Data Helper";
+			sourceTree = "<group>";
+		};
+		EDF491FE1D0428DC00F457DE /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				EDF492111D0431C300F457DE /* SQSettingsViewController.h */,
+				EDF492121D0431C300F457DE /* SQSettingsViewController.m */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		EDF4920F1D042A8800F457DE /* Channels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Channels;
+			sourceTree = "<group>";
+		};
+		EDF492141D0564BA00F457DE /* ExternalWebView */ = {
+			isa = PBXGroup;
+			children = (
+				EDF492151D05673A00F457DE /* SQExternalLinkViewController.h */,
+				EDF492161D05673A00F457DE /* SQExternalLinkViewController.m */,
+			);
+			name = ExternalWebView;
+			sourceTree = "<group>";
+		};
+		EDF4921B1D05C9CD00F457DE /* AddNew */ = {
+			isa = PBXGroup;
+			children = (
+				EDF4921C1D05C9DC00F457DE /* SQAddNewViewController.h */,
+				EDF4921D1D05C9DC00F457DE /* SQAddNewViewController.m */,
+			);
+			name = AddNew;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -389,9 +436,12 @@
 				ED1A51261D019F8500D301B4 /* HexColors.m in Sources */,
 				ED2C6BCB1CFD64B20019C4D3 /* Squashmag.xcdatamodeld in Sources */,
 				ED2C6BC51CFD64B20019C4D3 /* ViewController.m in Sources */,
+				EDF492171D05673A00F457DE /* SQExternalLinkViewController.m in Sources */,
 				ED2C6BC21CFD64B20019C4D3 /* AppDelegate.m in Sources */,
 				EDD10C001D005E0200CE49F4 /* YSLCardView.m in Sources */,
+				EDF4921E1D05C9DC00F457DE /* SQAddNewViewController.m in Sources */,
 				EDD10C011D005E0200CE49F4 /* YSLDraggableCardContainer.m in Sources */,
+				EDF492131D0431C300F457DE /* SQSettingsViewController.m in Sources */,
 				ED335BB31CFF1C9200859D03 /* Article+CoreDataProperties.m in Sources */,
 				ED2C6BBF1CFD64B20019C4D3 /* main.m in Sources */,
 			);

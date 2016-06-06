@@ -15,5 +15,7 @@ pod 'JTMaterialSpinner', '~> 1.0'
 pod 'SDWebImage', '~>3.7'
 pod 'Firebase/RemoteConfig'
 pod 'BFPaperButton’
+pod "JTMaterialSwitch"
+pod 'JTMaterialTransition', '~> 1.0'
 
 end

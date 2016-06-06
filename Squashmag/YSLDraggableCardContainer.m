@@ -197,7 +197,7 @@ typedef NS_ENUM(NSInteger, MoveSlope) {
                              }
                              
                              if (direction == YSLDraggableDirectionDown) {
-                                 view.center = CGPointMake(view.center.x, (weakself.frame.size.height * 1.5));
+                                 view.center = CGPointMake(view.center.x, (weakself.frame.size.height * 1.5)*2);
                              }
                              
                              if (!undoHandler) {
@@ -234,7 +234,7 @@ typedef NS_ENUM(NSInteger, MoveSlope) {
                                    initialSpringVelocity:0.0
                                                  options:UIViewAnimationOptionCurveLinear | UIViewAnimationOptionAllowUserInteraction
                                               animations:^{
-                                                  view.center = CGPointMake(view.center.x, -1 * ((weakself.frame.size.height) / 2));
+                                                  view.center = CGPointMake(view.center.x, -1 * ((weakself.frame.size.height)));
                                                   [weakself cardViewDefaultScale];
                                               } completion:^(BOOL finished) {
                                                   if (!undoHandler) {

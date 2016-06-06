@@ -9,11 +9,15 @@
 #import "ViewController.h"
 #import "SQFirebaseHelper.h"
 #import "YSLDraggableCardContainer.h"
-#import "CardView.h"
 #import <JTMaterialSpinner/JTMaterialSpinner.h>
 #import "HexColors.h"
+#import "BFPaperButton.h"
+#import "SQSettingsViewController.h"
+#import "SQExternalLinkViewController.h"
+#import "CardView.h"
+#import "SQAddNewViewController.h"
 
-@interface ViewController ()<YSLDraggableCardContainerDelegate, YSLDraggableCardContainerDataSource>
+@interface ViewController ()<YSLDraggableCardContainerDelegate, YSLDraggableCardContainerDataSource,CardViewDelegate,UIViewControllerTransitioningDelegate>
 
 @property (nonatomic, strong) NSArray *articlesArry;
 @property (nonatomic, strong) YSLDraggableCardContainer *container;
@@ -59,12 +63,32 @@
     }];
     
     _container = [[YSLDraggableCardContainer alloc]init];
-    _container.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
+    _container.frame = CGRectMake(0, 77, self.view.frame.size.width, self.view.frame.size.height-77-30);
     _container.backgroundColor = [UIColor clearColor];
     _container.dataSource = self;
     _container.delegate = self;
     _container.canDraggableDirection = YSLDraggableDirectionLeft | YSLDraggableDirectionRight | YSLDraggableDirectionUp | YSLDraggableDirectionDown;
     [self.view insertSubview:_container belowSubview:_spinnerView];
+    
+    BFPaperButton *add = [[BFPaperButton alloc] initWithFrame:CGRectMake(8, 22, 44, 44) raised:NO];
+    [add setImage:[UIImage imageNamed:@"Add"] forState:UIControlStateNormal];
+    [add setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [add setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
+    [add addTarget:self action:@selector(addClicked:) forControlEvents:UIControlEventTouchUpInside];
+    add.tapCircleColor = [UIColor colorWithWhite:1 alpha:0.5];
+    add.cornerRadius = add.frame.size.width / 2;
+    add.rippleFromTapLocation = NO;
+    [self.view insertSubview:add belowSubview:_container];
+    
+    BFPaperButton *settings = [[BFPaperButton alloc] initWithFrame:CGRectMake(self.view.frame.size.width-44-8, 22, 44, 44) raised:NO];
+    [settings setImage:[UIImage imageNamed:@"Settings"] forState:UIControlStateNormal];
+    [settings addTarget:self action:@selector(settingsClicked:) forControlEvents:UIControlEventTouchUpInside];
+    [settings setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [settings setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
+    settings.tapCircleColor = [UIColor colorWithWhite:1 alpha:0.5];
+    settings.cornerRadius = settings.frame.size.width / 2;
+    settings.rippleFromTapLocation = NO;
+    [self.view insertSubview:settings belowSubview:_container];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -72,8 +96,10 @@
 }
 
 - (UIView *)cardContainerViewNextViewWithIndex:(NSInteger)index{
-    CardView *view = [[CardView alloc]initWithFrame:CGRectMake(10, 77, self.view.frame.size.width-20, self.view.frame.size.height-77*2)];
+    CardView *view = [[CardView alloc]initWithFrame:CGRectMake(10, 0, self.view.frame.size.width-20, self.view.frame.size.height-77-30)];
     view.articleObj = [_articlesArry objectAtIndex:index];
+    view.index = index;
+    view.delegate = self;
     return view;
 }
 
@@ -102,6 +128,10 @@
     }
 }
 
+-(UIStatusBarStyle)preferredStatusBarStyle{
+    return UIStatusBarStyleLightContent;
+}
+
 - (void)cardContainerViewDidCompleteAll:(YSLDraggableCardContainer *)container;{
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0.3 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
         [container reloadCardContainer];
@@ -112,7 +142,31 @@
     NSLog(@"++ index : %ld",(long)index);
 }
 
+- (void)addClicked:(UIButton *)sender{
+    SQAddNewViewController *picker = [self.storyboard instantiateViewControllerWithIdentifier:@"SQAddNewViewController"];
+    picker.providesPresentationContextTransitionStyle = YES;
+    picker.definesPresentationContext = YES;
+    picker.modalPresentationStyle = UIModalPresentationOverCurrentContext;
+    [self presentViewController:picker animated:NO completion:nil];
+}
+
+- (void)settingsClicked:(UIButton *)sender {
+    SQSettingsViewController *picker = [self.storyboard instantiateViewControllerWithIdentifier:@"SQSettingsViewController"];
+    picker.providesPresentationContextTransitionStyle = YES;
+    picker.definesPresentationContext = YES;
+    picker.modalPresentationStyle = UIModalPresentationOverCurrentContext;
+    [self presentViewController:picker animated:NO completion:nil];
+}
+
+-(void)cardView:(CardView *)view didTapExternalLink:(NSURL *)url withPoint:(CGPoint)point{
+    SQExternalLinkViewController *newView = [self.storyboard instantiateViewControllerWithIdentifier:@"SQExternalLinkViewController"];
+    [self.navigationController pushViewController:newView animated:YES];
+    
+}
+
+
 -(void)dude{
+    
     [SQFirebaseHelper uploadArticleWithHeading:[self randHeading] author:[self randAuth] image:[self randImage] website:[self randWeb] success:^(BOOL success, NSError *error) {
         if (success) {
                         if (_innt<2) {

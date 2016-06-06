@@ -8,7 +8,6 @@
 
 #import "CardView.h"
 #import <SDWebImage/UIImageView+WebCache.h>
-#import "BFPaperButton.h"
 #import "HexColors.h"
 
 #define IS_IPHONE_4s ( fabs( ( double )[ [ UIScreen mainScreen ] bounds ].size.height - ( double )480 ) < DBL_EPSILON )
@@ -103,26 +102,13 @@ NSString *const articleHeadingWhiteOrBlack = @"articleHeadingWhiteOrBlack";
     imageContainerView.layer.rasterizationScale = [[UIScreen mainScreen] scale];
     [self addSubview:imageContainerView];
     
-    BFPaperButton *circle1 = [[BFPaperButton alloc] initWithFrame:CGRectMake(self.frame.size.width-self.frame.size.width/7-20,
-                                                                             _imageView.frame.size.height-self.frame.size.width/7/1.5,
-                                                                             self.frame.size.width/7,
-                                                                             self.frame.size.width/7)
-                                                           raised:YES];
-    
-    [circle1 setBackgroundColor:[UIColor hx_colorWithHexRGBAString:self.remoteConfig[mainScreenWebSiteButtonColorHex].stringValue]];
-
-    [circle1 addTarget:self action:@selector(buttonWasPressed:) forControlEvents:UIControlEventTouchUpInside];
-    circle1.cornerRadius = circle1.frame.size.width / 2;
-    [circle1 setImage:[UIImage imageNamed:@"ExternalLink"] forState:UIControlStateNormal];
-    [self addSubview:circle1];
-    
     _headingLabel = [[UILabel alloc]initWithFrame:CGRectMake(20, _imageView.frame.size.height+20, self.frame.size.width-40, self.frame.size.height/4)];
     _headingLabel.numberOfLines = 0;
     _headingLabel.textColor = [UIColor colorWithWhite:[self.remoteConfig[articleHeadingWhiteOrBlack].numberValue integerValue] alpha:0.87];
     
     NSInteger fontSize;
     if (IS_IPHONE_4s) {
-        fontSize = (self.frame.size.width / [self.remoteConfig[mainScreenHeadingFontSize].numberValue integerValue])/1.5;
+        fontSize = (self.frame.size.width / [self.remoteConfig[mainScreenHeadingFontSize].numberValue integerValue])/1.2;
     }
     else{
         fontSize = self.frame.size.width / [self.remoteConfig[mainScreenHeadingFontSize].numberValue integerValue];
@@ -144,7 +130,16 @@ NSString *const articleHeadingWhiteOrBlack = @"articleHeadingWhiteOrBlack";
 
 -(void)setArticleObj:(Article *)articleObj{
     [_imageView sd_setImageWithURL:[NSURL URLWithString:articleObj.articleImageUrl] placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
-    _headingLabel.text = articleObj.articleHeading;
+
+    if (articleObj.articleHeading.length<=100) {
+        _headingLabel.text = articleObj.articleHeading;
+    }
+    else{
+        NSRange stringRange = {0, MIN([articleObj.articleHeading length], 100)};
+        stringRange = [articleObj.articleHeading rangeOfComposedCharacterSequencesForRange:stringRange];
+        NSString *shortString = [articleObj.articleHeading substringWithRange:stringRange];
+        _headingLabel.text = [NSString stringWithFormat:@"%@...",shortString];
+    }
     [_headingLabel sizeToFit];
     _websiteLabel.text = articleObj.articleWebsite;
     [_websiteLabel sizeToFit];
@@ -171,10 +166,48 @@ NSString *const articleHeadingWhiteOrBlack = @"articleHeadingWhiteOrBlack";
     [_authorLabel sizeToFit];
     _authorLabel.frame = CGRectMake(_authorImageView.frame.origin.x+_authorImageView.frame.size.width+5, _headingLabel.frame.origin.y+_headingLabel.frame.size.height+8, _authorLabel.frame.size.width, _authorLabel.frame.size.height);
     _authorLabel.center = CGPointMake(_authorLabel.center.x, _authorImageView.center.y);
+    
+    _externalLinkButton = [[BFPaperButton alloc] initWithFrame:CGRectMake(self.frame.size.width-self.frame.size.width/7-20,
+                                                               _imageView.frame.size.height-self.frame.size.width/7/1.5,
+                                                               self.frame.size.width/7,
+                                                               self.frame.size.width/7)
+                                             raised:YES];
+    
+    [_externalLinkButton setBackgroundColor:[UIColor hx_colorWithHexRGBAString:self.remoteConfig[mainScreenWebSiteButtonColorHex].stringValue]];
+    _externalLinkButton.tapCircleColor = [UIColor colorWithWhite:1 alpha:0.2];
+    [_externalLinkButton addTarget:self action:@selector(buttonWasPressed:) forControlEvents:UIControlEventTouchUpInside];
+    _externalLinkButton.cornerRadius = _externalLinkButton.frame.size.width / 2;
+    [_externalLinkButton setImage:[UIImage imageNamed:@"ExternalLink"] forState:UIControlStateNormal];
+    _externalLinkButton.rippleFromTapLocation = NO;
+    [self addSubview:_externalLinkButton];
+    
+    BFPaperButton *share = [[BFPaperButton alloc] initWithFrame:CGRectMake(0, self.frame.size.height-self.frame.size.height/10, self.frame.size.height/10, self.frame.size.height/10) raised:NO];
+    [share setImage:[UIImage imageNamed:@"Share"] forState:UIControlStateNormal];
+    [share addTarget:self action:@selector(shareWasPressed:) forControlEvents:UIControlEventTouchUpInside];
+    share.tapCircleColor = [UIColor colorWithWhite:1 alpha:0.5];
+    share.cornerRadius = share.frame.size.width / 2;
+    share.rippleFromTapLocation = NO;
+    [self addSubview:share];
+    
+    BFPaperButton *like = [[BFPaperButton alloc] initWithFrame:CGRectMake(self.frame.size.height/10, self.frame.size.height-self.frame.size.height/10, self.frame.size.height/10, self.frame.size.height/10) raised:NO];
+    [like setImage:[UIImage imageNamed:@"heart"] forState:UIControlStateNormal];
+    [like addTarget:self action:@selector(shareWasPressed:) forControlEvents:UIControlEventTouchUpInside];
+    like.tapCircleColor = [UIColor colorWithWhite:1 alpha:0.5];
+    like.cornerRadius = like.frame.size.width / 2;
+    like.rippleFromTapLocation = NO;
+    [self addSubview:like];
+}
+
+-(void)shareWasPressed:(BFPaperButton*)sender{
+    
 }
 
 -(void)buttonWasPressed:(UIButton*)sender{
-    
+
+    if ([self.delegate respondsToSelector:@selector(cardView:didTapExternalLink:withPoint:)]) {
+        CGPoint point = [self convertPoint:sender.center toView:[UIApplication sharedApplication].keyWindow];
+        [self.delegate cardView:self didTapExternalLink:[NSURL URLWithString:@"www.google.com"] withPoint:point];
+    }
 }
 
 @end

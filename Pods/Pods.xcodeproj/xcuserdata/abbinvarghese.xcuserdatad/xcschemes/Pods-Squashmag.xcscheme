@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '00BBAD94EEEC0304CE3F8D912806F2F9'
+               BlueprintIdentifier = 'E76D0575B9E9DA83495EA4A3E24BED7E'
                BlueprintName = 'Pods-Squashmag'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libPods-Squashmag.a'>
