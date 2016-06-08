@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "SQFirebaseHelper.h"
 @import Firebase;
+NSString *const articleForReview = @"articleForReview";
 
 @interface AppDelegate ()
 
@@ -59,7 +60,24 @@
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSUserDefaults *mySharedDefaults = [[NSUserDefaults alloc] initWithSuiteName: @"group.ThePaadamCompany.Squashmag"];
+        NSMutableArray *array = [NSMutableArray arrayWithArray:[mySharedDefaults objectForKey:articleForReview]];
+        if (array.count>0) {
+            for (NSString *string in array) {
+                FIRDatabaseReference *ref = [[FIRDatabase database] reference];
+                NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:
+                                      string,@"articleUrl",
+                                      @"",@"articleauthor",
+                                      nil];
+                [[[ref child:@"reviewArticles"] childByAutoId] setValue:dict];
+
+            }
+            [mySharedDefaults removeObjectForKey:articleForReview];
+        }
+    });
+
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {

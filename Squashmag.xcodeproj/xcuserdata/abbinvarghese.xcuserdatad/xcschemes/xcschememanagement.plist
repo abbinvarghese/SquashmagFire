@@ -9,9 +9,19 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>SquashmagShare.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>9</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>ED1F2E431D080D280051CA50</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>ED2C6BB91CFD64B20019C4D3</key>
 		<dict>
 			<key>primary</key>

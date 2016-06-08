@@ -329,7 +329,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copy paste a url or share from any app" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XuN-hf-JeD">
-                                <rect key="frame" x="28" y="-60" width="544" height="24"/>
+                                <rect key="frame" x="30" y="-60" width="540" height="24"/>
                                 <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="0.84346153846153848" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -354,6 +354,9 @@
                                         <state key="normal" title="Submit">
                                             <color key="titleColor" white="0.0" alpha="0.8409375" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="submit:" destination="tmj-mq-B0x" eventType="touchUpInside" id="hi3-S2-7ti"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -371,17 +374,19 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="XuN-hf-JeD" firstAttribute="top" secondItem="VKU-t9-Zcd" secondAttribute="bottom" constant="-60" id="TBf-i2-HFs"/>
-                            <constraint firstItem="XuN-hf-JeD" firstAttribute="leading" secondItem="mO2-37-021" secondAttribute="leadingMargin" constant="8" id="Ytr-HW-phS"/>
+                            <constraint firstItem="XuN-hf-JeD" firstAttribute="centerX" secondItem="mO2-37-021" secondAttribute="centerX" id="TDR-UP-vGI"/>
                             <constraint firstItem="VKU-t9-Zcd" firstAttribute="top" secondItem="mO2-37-021" secondAttribute="topMargin" constant="-60" id="d4f-Gn-dza"/>
                             <constraint firstItem="VKU-t9-Zcd" firstAttribute="leading" secondItem="mO2-37-021" secondAttribute="leading" id="mkH-B7-ESI"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="XuN-hf-JeD" secondAttribute="trailing" constant="8" id="rX6-0f-sec"/>
+                            <constraint firstItem="XuN-hf-JeD" firstAttribute="width" secondItem="mO2-37-021" secondAttribute="width" multiplier="0.9" id="n2W-cQ-C7A"/>
                             <constraint firstAttribute="trailing" secondItem="VKU-t9-Zcd" secondAttribute="trailing" id="ulO-X3-vlb"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="constrain" destination="d4f-Gn-dza" id="ugP-7Y-myK"/>
                         <outlet property="labelConstrin" destination="TBf-i2-HFs" id="bPZ-cP-D7o"/>
+                        <outlet property="msgLabel" destination="XuN-hf-JeD" id="1nF-6z-RyE"/>
                         <outlet property="textField" destination="4BP-da-ojr" id="u87-cb-uqq"/>
+                        <outlet property="textFieldCenterConstrain" destination="TDR-UP-vGI" id="qES-eH-ZsT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wkp-EK-5it" userLabel="First Responder" sceneMemberID="firstResponder"/>

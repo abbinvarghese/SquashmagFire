@@ -138,16 +138,21 @@
     });
 }
 
-- (void)cardContainerView:(YSLDraggableCardContainer *)cardContainerView didSelectAtIndex:(NSInteger)index draggableView:(UIView *)draggableView{
-    NSLog(@"++ index : %ld",(long)index);
-}
-
 - (void)addClicked:(UIButton *)sender{
-    SQAddNewViewController *picker = [self.storyboard instantiateViewControllerWithIdentifier:@"SQAddNewViewController"];
-    picker.providesPresentationContextTransitionStyle = YES;
-    picker.definesPresentationContext = YES;
-    picker.modalPresentationStyle = UIModalPresentationOverCurrentContext;
-    [self presentViewController:picker animated:NO completion:nil];
+    
+    [[FIRAuth auth] addAuthStateDidChangeListener:^(FIRAuth *_Nonnull auth,
+                                                    FIRUser *_Nullable user) {
+        if (user != nil) {
+            SQAddNewViewController *picker = [self.storyboard instantiateViewControllerWithIdentifier:@"SQAddNewViewController"];
+            picker.providesPresentationContextTransitionStyle = YES;
+            picker.definesPresentationContext = YES;
+            picker.modalPresentationStyle = UIModalPresentationOverCurrentContext;
+            [self presentViewController:picker animated:NO completion:nil];
+        } else {
+            
+        }
+    }];
+
 }
 
 - (void)settingsClicked:(UIButton *)sender {
